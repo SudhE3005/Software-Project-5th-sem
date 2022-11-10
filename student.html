@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HMS</title>
+    <link rel="stylesheet" href="css/student.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+</head>
+
+<body>
+    <nav class="navbar">
+        <span class="toggle-nav" id="toggle-nav">
+            <i class="material-icons">menu</i>
+        </span>
+            <h1 class="headnav"> <a href="student.html" style="text-decoration: none; color: white;">Hostel Management System</a></h1>
+        </a>
+        <ul class="main-nav" id="main-nav">
+            <li><a href="#" class="nav-links">Outpass</a></li>
+            <li><a href="#" class="nav-links">Mess Management</a></li>
+            <li><a href="#" class="nav-links">Circulars</a></li>
+        </ul>
+    </nav>
+    <div class="student">
+        <h1>Welcome to Hostel Management System</h1>
+        <br><br>
+        <ul>
+            <li>Name: <span class="name"></span></li>
+            <li>Register Number: <span class="rno"></span></li>
+            <li>Room: <span class="room"></span></li>
+        </ul>
+    </div>
+    <script>
+        let mainNav = document.getElementById('main-nav');
+        let toggleNav = document.getElementById('toggle-nav');
+        toggleNav.addEventListener('click', function () {
+            mainNav.classList.toggle('active')
+        });
+    </script>
+</body>
+
+</html>
