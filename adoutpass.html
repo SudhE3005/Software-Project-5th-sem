@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<style>
+    th,td{
+        padding: 20px 30px;
+    }
+</style>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HMS</title>
+    <!-- CSS only -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <link rel="stylesheet" href="student.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+</head>
+
+<body>
+    <nav class="navbar">
+        <span class="toggle-nav" id="toggle-nav">
+            <i class="material-icons">menu</i>
+        </span>
+            <h1 class="headnav"> <a href="student.html" style="text-decoration: none; color: white;">Hostel Management System</a></h1>
+        </a>
+        <ul class="main-nav" id="main-nav">
+            <li><a href="#" class="nav-links">Outpass</a></li>
+            <li><a href="#" class="nav-links">Mess Management</a></li>
+            <li><a href="#" class="nav-links">Circulars</a></li>
+        </ul>
+    </nav>
+    <div class="student">
+        <h1>Welcome to Hostel Management System</h1>
+        <br>
+        <h2>Manage Out Passes</h2>
+        <table>
+            <tr>
+                <th> Name </th>
+                <th> Block </th>
+                <th> Room </th>
+                <th> City </th>
+                <th> Reason </th>
+                <th> Leaving date </th>
+                <th> Return Date </th>
+                <th> Request Status</th>
+            </tr>
+            <tr>
+                <!-- We need to fetch data from db and add it here. -->
+                <!-- This is just for sample -->
+                <td> Supraja </td>
+                <td> LH 4 </td>
+                <td> D 11 </td>
+                <td> Chennai </td>
+                <td> Going home</td>
+                <td> 11/11/2022 </td>
+                <td> 14/11/2022 </td>
+                <td> 
+                    <input type="radio" id="approve" name="approve_reject">
+                    <label for="approve" style="padding-right: 50px;">Approve</label>
+                    <input type="radio" id="reject" name="approve_reject">
+                    <label for="reject">Reject</label>
+                </td>
+            </tr>
+        </table>
+        <input type="checkbox" id="approve_all">
+        <label for="approve_all">Approve all</label><br><br>
+        <button type="submit" class="btn btn-primary">Submit</button>
+    <script>
+        let mainNav = document.getElementById('main-nav');
+        let toggleNav = document.getElementById('toggle-nav');
+        toggleNav.addEventListener('click', function () {
+            mainNav.classList.toggle('active')
+        });
+    </script>
+</body>
+
+</html>
