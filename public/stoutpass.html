@@ -7,7 +7,7 @@
     <title>HMS</title>
     <!-- CSS only -->
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
-    <link rel="stylesheet" href="css/student.css">
+    <link rel="stylesheet" href="express/public/css/student.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
 </head>
@@ -21,8 +21,8 @@
         </a>
         <ul class="main-nav" id="main-nav">
             <li><a href="#" class="nav-links">Outpass</a></li>
-            <li><a href="#" class="nav-links">Mess Management</a></li>
-            <li><a href="#" class="nav-links">Circulars</a></li>
+            <li><a href="/stmess.html" class="nav-links">Mess Management</a></li>
+            <li><a href="/stcir.html" class="nav-links">Circulars</a></li>
         </ul>
     </nav>
     <div class="student">
@@ -30,39 +30,39 @@
         <br>
         <h2>Apply for your Out Passes</h2>
         <br><br>
-        <form>
+        <form action="#" method="POST">
             <div class="form-row">
               <div class="form-group col-md-6">
                 <label for="inputName4">Name</label>
-                <input type="text" class="form-control" id="inputName4" placeholder="Name">
+                <input type="text" class="form-control" name="name" id="inputName4" placeholder="Name">
               </div>
                 <div class="form-group col-md-6">
                 <label for="inputRoom4">Block</label>
-                <input type="text" class="form-control" id="inputBlock4" placeholder="Block">
+                <input type="text" class="form-control" name="block" id="inputBlock4" placeholder="Block">
               </div>
               <div class="form-group col-md-6">
                 <label for="inputRoom4">Room</label>
-                <input type="text" class="form-control" id="inputRoom4" placeholder="Room">
+                <input type="text" class="form-control" name="room" id="inputRoom4" placeholder="Room">
               </div>
             </div>
             <div class="form-row">
               <div class="form-group col-md-6">
                 <label for="inputCity">City</label>
-                <input type="text" class="form-control" id="inputCity">
+                <input type="text" class="form-control" name="city" id="inputCity">
               </div>
               <div class="form-group col-md-6">
                 <label for="inputCity">Reason</label>
-                <input type="text" class="form-control" id="inputReason">
+                <input type="text" class="form-control" name="reason" id="inputReason">
               </div>
             </div>
             <div class="form-row">
               <div class="form-group col-md-6">
                 <label for="inputLDate">Leaving Date</label>
-                <input type="date" class="form-control" id="inputLDate">
+                <input type="date" class="form-control" name="ldate" id="inputLDate">
               </div>
               <div class="form-group col-md-6">
                 <label for="inputRDate">Return Date</label>
-                <input type="date" class="form-control" id="inputRDate">
+                <input type="date" class="form-control" name="rdate" id="inputRDate">
               </div>
             </div>
             <div class="form-group">
@@ -73,16 +73,21 @@
                 </label>
               </div>
             </div>
-            <button type="submit" class="btn btn-primary">Sign in</button>
+            <button type="submit" class="btn btn-primary" onclick="success()">Request Outpass</button>
           </form>
     </div>
     <script>
+        function success() {
+            alert("Outpass request initiated");
+            // window.close()
+            }
         let mainNav = document.getElementById('main-nav');
         let toggleNav = document.getElementById('toggle-nav');
         toggleNav.addEventListener('click', function () {
             mainNav.classList.toggle('active')
         });
     </script>
+    
 </body>
 
 </html>
