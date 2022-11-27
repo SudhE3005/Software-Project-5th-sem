@@ -48,7 +48,7 @@ app.get('/stoutpass.html', function (req, res) {
   app.use(express.urlencoded({extended: true}));
   app.use(bodyParser.json()); 
   //HTML input into json
-  app.post('#', function(req, res){ 
+  app.post('/add', function(req, res){ 
       var opDetails = new opmodel({
             name: req.body.name,
             block: req.body.block,
@@ -80,7 +80,8 @@ app.get('/stoutpass.html', function (req, res) {
         if (err)
           console.log(err)
         else
-          console.log('Outpass inserted');
+        {console.log('Outpass inserted');
+         res.send('Success');
       });
     });
 
