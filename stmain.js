@@ -81,7 +81,7 @@ app.get('/stoutpass.html', function (req, res) {
           console.log(err)
         else
         {console.log('Outpass inserted');
-         res.send('Success');
+         res.send('Success');}
       });
     });
 
