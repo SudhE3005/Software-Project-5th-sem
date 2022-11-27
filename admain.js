@@ -13,12 +13,12 @@ const path = require('path');
 app.get('/', function (req, res) {
     res.sendFile(path.join(__dirname,'public','admin.html'));
     app.use(express.urlencoded({extended: true}));
-    app.use(express.static(fs.readFile(path.join(__dirname,'public','css','student.css'), function(err,data){
-        if(err)
-            console.log(err)
-        else
-            console.log(data)
-    })));
+//     app.use(express.static(fs.readFile(path.join(__dirname,'public','css','student.css'), function(err,data){
+//         if(err)
+//             console.log(err)
+//         else
+//             console.log(data)
+//     })));
     // var styles = "@import url(' ..public/css/student.css ')";;
     // console.log(styles);
     // app.use(express.static(styles));
