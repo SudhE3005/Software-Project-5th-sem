@@ -24,7 +24,7 @@
             <h1 class="headnav"> <a href="admin.html" style="text-decoration: none; color: white;">Hostel Management System</a></h1>
         </a>
         <ul class="main-nav" id="main-nav">
-            <li><a href="#" class="nav-links">Outpass</a></li>
+            <li><a href="adoutpass.html" class="nav-links">Outpass</a></li>
             <li><a href="admess.html" class="nav-links">Mess Management</a></li>
             <li><a href="adcir.html" class="nav-links">Circulars</a></li>
         </ul>
@@ -44,9 +44,26 @@
                 <th> Return Date </th>
                 <th> Request Status</th>
             </tr>
-            <tr>
                 <!-- We need to fetch data from db and add it here. -->
                 <!-- This is just for sample -->
+            <% val.forEach(function(data)){%>
+                <tr>
+                    <td><%= data.name %></td>
+                    <td><%= data.block %></td>
+                    <td><%= data.room %></td>
+                    <td><%= data.city %></td>
+                    <td><%= data.reason %></td>
+                    <td><%= data.ldate %></td>
+                    <td><%= data.rdate %></td>
+                    <td> 
+                        <input type="radio" id="approve" name="approve_reject">
+                        <label for="approve" style="padding-right: 50px;">Approve</label>
+                        <input type="radio" id="reject" name="approve_reject">
+                        <label for="reject">Reject</label>
+                    </td>
+                </tr>
+            <% }) %>
+            <tr>
                 <td> Supraja </td>
                 <td> LH 4 </td>
                 <td> D 11 </td>
