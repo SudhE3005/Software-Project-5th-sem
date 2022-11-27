@@ -32,13 +32,19 @@
             <script>document.write( new Date().getUTCFullYear() );</script>
         </h2>
         <br><br>
-        <input type="file" id="myFile" name="filename" style="padding: 0 50px;">
-        <br><br>
-        <!-- <input type="submit"> -->
-        <button type="submit" class="btn btn-primary" style="margin-left: 60px; margin-top: 10px; padding: 2px 10px;">Submit</button>
-        <!-- <a href="#">Click here to check fee</a> -->
+        <form action="/admess.html" method="post">
+            <input type="file" id="myFile" name="filename" style="padding: 0 50px;">
+            <br><br>
+            <!-- <input type="submit"> -->
+            <button type="submit" class="btn btn-primary" style="margin-left: 60px; margin-top: 10px; padding: 2px 10px;" onclick="success()">Submit</button>
+            <!-- <a href="#">Click here to check fee</a> -->
+        </form>
     </div>
     <script>
+        function success()
+        {
+            alert("Successfully uploaded");
+        }
         let mainNav = document.getElementById('main-nav');
         let toggleNav = document.getElementById('toggle-nav');
         toggleNav.addEventListener('click', function () {
