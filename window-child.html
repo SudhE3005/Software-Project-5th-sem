@@ -21,26 +21,32 @@
     </nav>
     <div class="student">
         <h1>New Circular</h1>
-        <div class="form-row">
-            <div class="form-group col-md-6">
-              <label for="card_title">Card Title</label>
-              <input type="text" class="form-control" id="card_title" placeholder="Enter card title">
+        <form action="/window-child.html" method="POST">
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                <label for="card_title">Card Title</label>
+                <input type="text" class="form-control" name="c_title" id="card_title" placeholder="Enter card title">
+                </div>
+                <br>
+                <div class="form-group col-md-6">
+                <label for="card_subtitle">Card Subtitle</label>
+                <input type="text" class="form-control" name="c_subtitle" id="card_subtitle" placeholder="Enter card subtitle">
+                </div>
+                <br>
+                <div class="form-group col-md-6">
+                <label for="card_link">Card Link</label>
+                <input type="text" class="form-control" name="c_link" id="card_link" placeholder="Enter card link">
+                </div>
             </div>
-            <br>
-            <div class="form-group col-md-6">
-              <label for="card_subtitle">Card Subtitle</label>
-              <input type="text" class="form-control" id="card_subtitle" placeholder="Enter card subtitle">
-            </div>
-            <br>
-            <div class="form-group col-md-6">
-              <label for="card_link">Card Link</label>
-              <input type="text" class="form-control" id="card_link" placeholder="Enter card link">
-            </div>
-        </div>
-        <br><br>
-        <button type="submit" class="btn btn-primary" onclick="window.close()">Create</button>
+            <br><br>
+            <button type="submit" class="btn btn-primary" onclick="success()">Create</button>
+        </form>
     </div>
     <script>
+        function success() {
+            alert("Circular added sucessfully");
+            window.close()
+            }
         let mainNav = document.getElementById('main-nav');
         let toggleNav = document.getElementById('toggle-nav');
         toggleNav.addEventListener('click', function () {
