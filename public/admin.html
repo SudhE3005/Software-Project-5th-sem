@@ -6,8 +6,119 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HMS</title>
     <link rel="stylesheet" href="css/student.css">
+    <!-- <script src="admain.js"></script> -->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .headnav{
+            color: white;
+        }
 
+        .student{
+            height: 100%;
+            padding-left: 8rem;
+            padding-top: 5rem;
+            color: rgb(3, 69, 69);
+        }
+
+        ul,li{
+            list-style: none;
+        }
+
+        body {
+            font-family: 'Inter UI', sans-serif;
+            background-image: url("zssn.png");
+            background-size: cover;
+        }
+        .navbar {
+            font-size: 18px;
+            background: rgb(3, 69, 69);
+            border-bottom: #615858 4px solid;
+            padding-bottom: 20px;
+            padding-top: 10px;
+        }
+
+        .main-nav {
+            list-style-type: none;
+            display: none;
+        }
+
+        .nav-links, .logo, .material-icons {
+            text-decoration: none;
+            color: ghostwhite;
+            opacity: 0.6;
+        }
+
+        .main-nav li {
+            text-align: center;
+            margin: 10px auto;
+        }
+
+        .logo {
+            display: flex;
+            font-size: 24px;
+            margin-top: 10px;
+            margin-left: 30px;
+        }
+
+        .logo img {
+            height: 50px;
+            width: 50px;
+            border-radius: 50px;
+        }
+
+        .logo p {
+            margin-top: 12px;
+            padding-left: 5px;
+        }
+
+        .toggle-nav {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+        }
+
+        .material-icons {
+            font-size: 24px;
+        }
+
+        .active {
+            display: block;
+        }
+
+        /* For large screen more than 600 */
+
+        @media screen and (min-width:600px) {
+            .navbar {
+                display: flex;
+                justify-content: space-between;
+                padding-bottom: 0;
+                height: 70px;
+                align-items: center;
+            }
+            .toggle-nav {
+                display: none;
+            }
+            .main-nav {
+                display: flex;
+                justify-content: end;
+                margin-right: 30px;
+            }
+            .main-nav>li {
+                margin: 0;
+            }
+            .nav-links {
+                margin-left: 20px;
+            }
+            .logo {
+                margin-top: 0;
+            }
+        }
+    </style>
 </head>
 
 <body>
@@ -15,7 +126,7 @@
         <span class="toggle-nav" id="toggle-nav">
             <i class="material-icons">menu</i>
         </span>
-            <h1 class="headnav"> <a href="admin.html" style="text-decoration: none; color: white;">Hostel Management System</a></h1>
+            <h1 class="headnav"> <a href="/" style="text-decoration: none; color: white;">Hostel Management System</a></h1>
         </a>
         <ul class="main-nav" id="main-nav">
             <li><a href="adoutpass.html" class="nav-links">Outpass</a></li>
